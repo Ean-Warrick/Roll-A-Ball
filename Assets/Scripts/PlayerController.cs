@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = $"Gems Collected: {count}/12";
+        countText.text = $"Coins Collected: {count}/12";
         if (count >= 12)
         {
             winTextObject.SetActive(true);
