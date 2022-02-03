@@ -1,7 +1,9 @@
-Roll-A-Ball is a game where you control a ball and have to collect gems that are scattered across the map!
-You win when you get all 12 gems!
+Roll-A-Ball is a game where you control a ball and have to collect coins that are scattered across the map!
+You win when you get all 12 coins!
 
-![image](https://user-images.githubusercontent.com/55159611/151347897-bcf1ec9e-4e8c-4184-9d2b-5f633cb19d66.png)
+![image](https://user-images.githubusercontent.com/55159611/152298648-8f9177d5-fd7e-467a-bd62-3c0d294adf58.png)
 
-![image](https://user-images.githubusercontent.com/55159611/151348042-fb9567ec-0e99-4b38-b82d-4b4bf6a739e8.png)
+
+![image](https://user-images.githubusercontent.com/55159611/152298891-d989a544-23b6-4788-af35-30d1de21a37d.png)
+
 
