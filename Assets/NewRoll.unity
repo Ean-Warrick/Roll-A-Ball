@@ -8497,6 +8497,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4782608126929117036, guid: e15b55d5604cb1c46813c317bec19e4e, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782608126929117036, guid: e15b55d5604cb1c46813c317bec19e4e, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782608126929117036, guid: e15b55d5604cb1c46813c317bec19e4e, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6783554361361096769, guid: e15b55d5604cb1c46813c317bec19e4e, type: 3}
       propertyPath: m_RootOrder
       value: 0
