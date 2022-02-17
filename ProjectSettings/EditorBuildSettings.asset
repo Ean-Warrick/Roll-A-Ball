@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Template/Scenes/RollMain.unity
     guid: 3917db4cca909f7478b6f2db7df95eb6
-  - enabled: 1
+  - enabled: 0
     path: Assets/NewRoll.unity
     guid: e06c3132e4563044c9cf2e5877d6da5f
   m_configObjects: {}

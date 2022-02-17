@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickUp
+  - Track
+  - Car
   layers:
   - Default
   - TransparentFX
