@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CubController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CubController : MonoBehaviour
     private bool isGrounded;
     private Rigidbody m_rigidbody;
     public GameObject target;
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +67,10 @@ public class CubController : MonoBehaviour
         {
             Debug.Log("Entered");
             isGrounded = true;
+        } else if (other.gameObject.CompareTag("Void"))
+        {
+            Debug.Log("Void");
+            SceneManager.LoadScene(0);
         }
 
     }
