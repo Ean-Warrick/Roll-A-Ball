@@ -23,12 +23,17 @@ public class CarController : MonoBehaviour
     {
         if (isGrounded)
         {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-            this.m_rigidbody.AddForce(transform.forward.x * 15 * verticalInput, 0, transform.forward.z * 15 * verticalInput);
+            //float horizontalInput = Input.GetAxis("Horizontal");
+            //float verticalInput = Input.GetAxis("Vertical");
+            //this.m_rigidbody.AddForce(transform.forward.x * 15 * verticalInput, 0, transform.forward.z * 15 * verticalInput);
             //transform.Translate(transform.up * verticalInput * .1f);
-            transform.Rotate(.1f * horizontalInput, 0, 0);
+            //transform.Rotate(.1f * horizontalInput, 0, 0);
 
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Debug.Log("Q!!!");
         }
        
     }

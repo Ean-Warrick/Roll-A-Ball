@@ -22,17 +22,41 @@ public class CubController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        this.m_rigidbody.AddForce(transform.right * 6f * verticalInput);
-        //transform.Translate(transform.forward * .1f * verticalInput);
-        transform.Rotate(0, .15f * horizontalInput, 0);
+        if (isGrounded)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            this.m_rigidbody.AddForce(transform.right * 6f * verticalInput);
+            //transform.Translate(transform.forward * .1f * verticalInput);
+            transform.Rotate(0, .15f * horizontalInput, 0);
+        }
+        
         if (!isGrounded)
         {
-            this.m_rigidbody.AddForce(0,-2,0);
+            var velocityy = this.m_rigidbody.velocity.y;
+            if (velocityy > -3f)
+            {
+                velocityy = -3f;
+            }
+            this.m_rigidbody.velocity = new Vector3(this.m_rigidbody.velocity.x, velocityy, this.m_rigidbody.velocity.z);
         }
         target.transform.position = transform.position;
         target.transform.rotation = transform.rotation;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            InfoHandler.nextLevel();
+        }
+
+        var speed = 20;
+        var xzVelo = new Vector2(this.m_rigidbody.velocity.x, this.m_rigidbody.velocity.z);
+        var magnitude = xzVelo.magnitude;
+        var unit = xzVelo.normalized;
+        if (magnitude > speed)
+        {
+            this.m_rigidbody.velocity = new Vector3(unit.x* speed, this.m_rigidbody.velocity.y, unit.y * speed);
+        }
+
     }
 
     private void OnCollisionEnter(Collision other)
