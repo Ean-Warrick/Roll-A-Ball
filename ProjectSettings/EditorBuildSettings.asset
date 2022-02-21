@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/NewRoll.unity
     guid: e06c3132e4563044c9cf2e5877d6da5f
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 086e981ce009cb549a5d16431f9cbac2
+  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 9c668b57aa5ccc74dae965142d294cba
   - enabled: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoHandler : MonoBehaviour
 {
-    static public int currentScene = 0;
+    static public int currentScene = 1;
  
     
     void Awake()
