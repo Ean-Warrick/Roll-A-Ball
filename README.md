@@ -1,9 +1,7 @@
-Roll-A-Ball is a game where you control a ball and have to collect coins that are scattered across the map!
-You win when you get all 12 coins!
+Track Bowl is a game where you drive a race car through a obstacle filled racetrack as fast as possible while hitting all the pins you can at the end! It's a fast paced, thrilling ride! 
 
-![image](https://user-images.githubusercontent.com/55159611/152298648-8f9177d5-fd7e-467a-bd62-3c0d294adf58.png)
+Big maps to race on!
+![pic 2](https://user-images.githubusercontent.com/55159611/155072386-65d301a0-5f56-4ce4-a110-3af9667f5c3f.png)
 
-
-![image](https://user-images.githubusercontent.com/55159611/152298891-d989a544-23b6-4788-af35-30d1de21a37d.png)
-
-
+Can you hit all the pins?
+![pic 1](https://user-images.githubusercontent.com/55159611/155072373-b2b379f3-4a47-4c81-9ccd-935fd2e7fdfa.png)
