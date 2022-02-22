@@ -27,7 +27,7 @@ public class CubController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded)
+        if (isGrounded || !isGrounded)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -36,15 +36,15 @@ public class CubController : MonoBehaviour
             transform.Rotate(0, turnSpeed * horizontalInput, 0);
         }
         
-        if (!isGrounded)
-        {
-            var velocityy = this.m_rigidbody.velocity.y;
-            if (velocityy > -3f)
-            {
-                velocityy = -3f;
-            }
-            this.m_rigidbody.velocity = new Vector3(this.m_rigidbody.velocity.x, velocityy, this.m_rigidbody.velocity.z);
-        }
+       // if (!isGrounded)
+        //{
+           // var velocityy = this.m_rigidbody.velocity.y;
+           // if (velocityy > -3f)
+           // {
+               // velocityy = -3f;
+           // }
+           // this.m_rigidbody.velocity = new Vector3(this.m_rigidbody.velocity.x, velocityy, this.m_rigidbody.velocity.z);
+       // }
         target.transform.position = transform.position;
         target.transform.rotation = transform.rotation;
 
