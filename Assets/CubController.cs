@@ -35,16 +35,7 @@ public class CubController : MonoBehaviour
             //transform.Translate(transform.forward * .1f * verticalInput);
             transform.Rotate(0, turnSpeed * horizontalInput, 0);
         }
-        
-       // if (!isGrounded)
-        //{
-           // var velocityy = this.m_rigidbody.velocity.y;
-           // if (velocityy > -3f)
-           // {
-               // velocityy = -3f;
-           // }
-           // this.m_rigidbody.velocity = new Vector3(this.m_rigidbody.velocity.x, velocityy, this.m_rigidbody.velocity.z);
-       // }
+ 
         target.transform.position = transform.position;
         target.transform.rotation = transform.rotation;
 
@@ -72,7 +63,7 @@ public class CubController : MonoBehaviour
         } else if (other.gameObject.CompareTag("Void"))
         {
             Debug.Log("Void");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
     }

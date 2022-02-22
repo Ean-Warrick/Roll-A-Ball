@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
 {
     public void PlayGame()
     {
-        var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        var nextScene = 2;
         InfoHandler.currentScene = nextScene;
         SceneManager.LoadScene(nextScene);
     }
