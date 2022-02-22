@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CubController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class CubController : MonoBehaviour
     public float turnSpeed;
     private float speed;
     private bool isGrounded;
+    private int count;
+    public TextMeshProUGUI countText;
     private Rigidbody m_rigidbody;
     public GameObject target;
 
@@ -18,7 +21,9 @@ public class CubController : MonoBehaviour
     void Start()
     {
         speed = 0;
+        count = 0;
         this.m_rigidbody = GetComponent<Rigidbody>();
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -81,6 +86,20 @@ public class CubController : MonoBehaviour
         {
             Debug.Log("Exited");
             isGrounded = false;
+        }
+    }
+
+    void SetCountText()
+    {
+        countText.text = $"Pins: {count}";
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pin"))
+        {
+            count += 1;
+            SetCountText();
         }
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Track
   - Car
   - Void
+  - Pin
   layers:
   - Default
   - TransparentFX
