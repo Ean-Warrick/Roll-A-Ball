@@ -9,7 +9,6 @@ public class CubController : MonoBehaviour
     public float acceleration;
     public float maxSpeed;
     public float turnSpeed;
-    private float speed;
     private bool isGrounded;
     private int count;
     public TextMeshProUGUI countText;
@@ -20,7 +19,6 @@ public class CubController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0;
         count = 0;
         this.m_rigidbody = GetComponent<Rigidbody>();
         SetCountText();
@@ -33,9 +31,9 @@ public class CubController : MonoBehaviour
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
-            this.m_rigidbody.AddForce(transform.right * 6f * verticalInput);
+            this.m_rigidbody.AddForce(transform.right * acceleration * verticalInput);
             //transform.Translate(transform.forward * .1f * verticalInput);
-            transform.Rotate(0, .15f * horizontalInput, 0);
+            transform.Rotate(0, turnSpeed * horizontalInput, 0);
         }
         
         if (!isGrounded)
@@ -55,13 +53,12 @@ public class CubController : MonoBehaviour
             InfoHandler.nextLevel();
         }
 
-        var speed = 20;
         var xzVelo = new Vector2(this.m_rigidbody.velocity.x, this.m_rigidbody.velocity.z);
         var magnitude = xzVelo.magnitude;
         var unit = xzVelo.normalized;
-        if (magnitude > speed)
+        if (magnitude > maxSpeed)
         {
-            this.m_rigidbody.velocity = new Vector3(unit.x* speed, this.m_rigidbody.velocity.y, unit.y * speed);
+            this.m_rigidbody.velocity = new Vector3(unit.x * maxSpeed, this.m_rigidbody.velocity.y, unit.y * maxSpeed);
         }
 
     }
